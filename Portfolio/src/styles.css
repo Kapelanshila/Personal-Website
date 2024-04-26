@@ -6,12 +6,12 @@ body, html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.background {
+.background, .content, .main-content {
     position: relative;
     z-index: 1;
 }
 
-.navbar, .main-content, .content {
+.navbar{
     position: relative;
     z-index: 2;
 }

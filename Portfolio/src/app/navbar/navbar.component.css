@@ -13,7 +13,7 @@
     }
   
     .hamburger {
-      display: none; /* Hide the hamburger by default */
+      display: none;
       font-size: 25px;
       background: none;
       border: none;
@@ -44,24 +44,36 @@
     }
   
     @media (max-width: 768px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
       .hamburger {
-        display: block; /* Show the hamburger icon on smaller screens */
+        display: block;
+        padding: 10px 20px 10px 0;
+        order: 1;
+      }
+
+      .logo {
+        order: 2;
+        display: block;
+        padding-left: 10px;
       }
   
       .nav-links {
         flex-direction: column;
         width: 100%;
-        display: none; /* Hide the links by default on smaller screens */
+        display: none;
+        order: 3;
+        padding: 0;
+        position: absolute;
+        background-color: #000;
+        top: 56px;
+        left: 0; 
       }
   
       .nav-links.show {
-        display: flex; /* Show the links when they are toggled */
-      }
-
-      .logo.hide-logo {
-        display: none;
+        display: flex;
       }
     }
-   
-  }
-  
+}
