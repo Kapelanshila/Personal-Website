@@ -1,0 +1,67 @@
+/* navbar.component.scss */
+
+.navbar {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  
+    .logo {
+      font-size: 25px;
+    }
+  
+    .hamburger {
+      display: none; /* Hide the hamburger by default */
+      font-size: 25px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+  
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s ease;
+          font-size: 23px;
+          &:hover {
+            color: #aaa;
+          }
+        }
+  
+        i {
+          font-size: 25px;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block; /* Show the hamburger icon on smaller screens */
+      }
+  
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hide the links by default on smaller screens */
+      }
+  
+      .nav-links.show {
+        display: flex; /* Show the links when they are toggled */
+      }
+
+      .logo.hide-logo {
+        display: none;
+      }
+    }
+   
+  }
+  
