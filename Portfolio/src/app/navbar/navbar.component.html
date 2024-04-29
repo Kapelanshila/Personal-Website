@@ -4,7 +4,7 @@
       <button class="hamburger" (click)="toggleNavLinks()">☰</button>
       <ul class="nav-links" [class.show]="navLinksVisible">
         <li><a href="#">HOME</a></li>
-        <li><a href="#">ART</a></li>
+        <li><a href="#" (click)="emitArtClick(); $event.preventDefault()">ART</a></li>
         <li><a href="#">ABOUT</a></li>
         <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
         <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>

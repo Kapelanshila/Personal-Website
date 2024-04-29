@@ -1,3 +1,5 @@
+<app-navbar (onArtClicked)="toggleColors()"></app-navbar>
+
 <div class="background">
   <span [style.color]="color1"></span>
   <span [style.color]="color1"></span>
@@ -9,5 +11,23 @@
 </div>
 
 <div class="content">
-    <button (click)="toggleColors()">Toggle Colors</button>
+  <div class="circle-container">
+    <div class="circle" id="circle1"></div>
+    <div class="circle" id="circle2">
+      <img src="assets/profile-code.png" alt="Profile Code" class="circle-image">
+    </div>
+  </div>
+  <div class="personal-info">
+    <h1>CHEYO KAPELANSHILA CHOMBA</h1>
+    <hr>
+    <p>I am currently a graduate digital consultant in data engineering. I have always been interested in technology and
+      work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and
+      create visually appealing and easy-to-use systems.</p>
+    <button>Download CV</button>
+  </div>
+  <div class="skills">
+    <h1>SKILLS</h1>
+    <hr>
+  </div>
+
 </div>

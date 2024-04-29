@@ -1,21 +1,21 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  navLinksVisible!: boolean;
+  @Output() onArtClicked = new EventEmitter<void>();
 
-  ngOnInit(): void {
-    this.navLinksVisible = false;
-  }
+  navLinksVisible = false;
 
   toggleNavLinks() {
     this.navLinksVisible = !this.navLinksVisible;
+  }
+
+  emitArtClick() {
+    this.onArtClicked.emit();
   }
 }
