@@ -25,9 +25,24 @@
       create visually appealing and easy-to-use systems.</p>
     <button>Download CV</button>
   </div>
+
   <div class="skills">
     <h1>SKILLS</h1>
     <hr>
+    <div class="skill-grid">
+      <div class="skill-card" *ngFor="let skill of skills" [style.--hover-color]="hoverColor">
+        <div class="skill-icon">
+          <img [src]="skill.image" [alt]="skill.name">
+          <div class="skill-name">{{ skill.name }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <div class="experience">
+    <h1>EXPERIENCE</h1>
+    <hr>
+    <div class="experience-box">
+     
+    </div>
 </div>
