@@ -13,20 +13,22 @@
 <div class="content">
 
   <div class="circle-container">
-    <div class="circle" id="circle1"></div>
-    <div class="circle" id="circle2">
+    <div class="circle" id="circle1" 
+         [style.background-color]="buttonColor"></div>
+    <div class="circle" id="circle2"
+         [style.background-color]="buttonColor">
       <img src="assets/profile-code.png" alt="Profile Code" class="circle-image">
     </div>
   </div>
+  
 
   <div class="personal-info">
     <h1>CHEYO KAPELANSHILA CHOMBA</h1>
     <hr>
-    <p>I am currently a graduate digital consultant in data engineering. I have always been interested in technology and
-      work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and
-      create visually appealing and easy-to-use systems.</p>
-    <button>Download CV</button>
-  </div>
+    <p>{{info}}</p>
+      <button [style.background-color]="buttonColor"
+      [style.--hover-button-color]="hoverButtonColor">{{buttonDisplay}}</button>
+    </div>
 
   <div class="skills">
     <h1>SKILLS</h1>

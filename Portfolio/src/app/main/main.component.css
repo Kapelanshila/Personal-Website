@@ -12,9 +12,11 @@
     backface-visibility: hidden;
     position: absolute;
     animation: move;
-    animation-duration: 35;
+    animation-duration: 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    transition: color 0.9s ease;
+    filter: brightness(65%);
 }
 
 
@@ -103,10 +105,10 @@
 }
 
 .circle {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    background-color: rgb(102, 0, 255);
+    transition: background-color 0.9s ease;
 }
 
 .circle#circle1 {
@@ -164,10 +166,9 @@
     font-size: 1em;
     padding: 15px 30px;
     color: #FFFFFF;
-    background-color: rgb(102, 0, 255);
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.9s ease;
     margin-left: 0;
     position: relative;
     margin-right: 50%;
@@ -175,7 +176,7 @@
 }
 
 .personal-info button:hover {
-    background-color: rgb(71, 0, 177);
+    background-color: var(--hover-button-color) !important;
 }
 
 
@@ -214,9 +215,8 @@
         width: 150px;
         height: 150px;
         border-radius: 50%;
-        background-color: rgb(102, 0, 255);
+        transition: background-color 0.9s ease !important;
     }
-
     .circle#circle1 {
         width: 6vw;
         height: 6vw;

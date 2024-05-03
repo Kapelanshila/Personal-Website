@@ -12,6 +12,12 @@ import { CommonModule } from '@angular/common';
 export class MainComponent {
   color1 = '#4200a2';
   color2 = '#3366ff';
+  hoverColor: string = 'rgba(51, 102, 255, 0.2)';
+  buttonColor  = 'rgba(102,0,255)';
+  hoverButtonColor: string = 'rgb(71, 0, 177)';
+  hovering: boolean = false;
+  buttonDisplay: string = "Download CV";
+  info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
 
   public skills = [
     { name: 'Angular', image: 'assets/angular.png' },
@@ -24,22 +30,22 @@ export class MainComponent {
     { name: 'Azure', image: 'assets/azure.png' }
   ];
 
-  experiences = [
-    { year: '2024', position: 'Graduate Consultant', company: 'Moyo Business Advisory', description: 'I am currently a graduate consultant at Moyo, specializing in Data Engineering. As an IT consultant, I work closely with clients to identify and solve complex IT problems, develop and implement technology solutions that align with business objectives, and ensure seamless integration of new systems into existing infrastructures.' },
-    { year: '2021', position: 'Junior IT Specialist', company: 'Dataproof Communications (Pty) Ltd.', description: 'As a Junior IT Specialist at Dataproof, I was responsible for capturing metadata from developed spreadsheets into the Dataproof proprietary records management system, ensuring compliance with National Archives of South Africa (NARS) approved file plans. My role also included auditing this information for accuracy, analyzing the system’s code and structure to recommend enhancements, and conducting business analysis to determine how technology could optimize operations.' },
-  ];
-
-  hoverColor: string = 'rgba(51, 102, 255, 0.2)';
-
   toggleColors() {
     if (this.color1 === '#4200a2' && this.color2 === '#3366ff') {
       this.color1 = 'rgb(188,0,76)';
       this.color2 = 'rgb(255,51,153)';
       this.hoverColor = 'rgba(255, 51, 153, 0.2)';
+      this.buttonColor = 'rgba(255,0,102)';
+      this.hoverButtonColor = 'rgba(208, 0, 84)'
+      this.info = "I have always been passionate about art, aspiring to become an animator since a very young age. Although my career began in IT, drawing remains a hobby of mine, and I am planning to start animation projects soon.";
+
     } else {
       this.color1 = '#4200a2';
       this.color2 = '#3366ff';
       this.hoverColor = 'rgba(51, 102, 255, 0.2)';
+      this.buttonColor = 'rgba(102,0,255)';
+      this.hoverButtonColor = 'rgb(71, 0, 177)';
+      this.info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
     }
   }
 }
