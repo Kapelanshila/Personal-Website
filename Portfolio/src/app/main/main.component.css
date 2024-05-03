@@ -99,7 +99,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
-    padding-bottom: 1%;
+    padding-bottom: 6%;
 }
 
 .circle {
@@ -125,7 +125,7 @@
     height: 30vw;
     position: absolute;
     right: 25vw;
-    top: 35vh;
+    top: 15%;
     transform: translate(50%, -50%);
     margin: 0;
     border-radius: 50%;
@@ -353,6 +353,25 @@
     }
 }
 
+/* Timeline mobile devices sizing */
+
+@media (max-width: 1063px) {
+
+    .experience {
+        width: 90% !important;
+    }
+    
+    .timeline{
+        .event {
+            &:before { 
+                left: calc(((((var(--date) * 0.45) + var(--spacing) + var(--line) + var(--dot) + (var(--dotborder) * 2)) * 1.5) * -1)) !important;
+                font-size: 0.8em !important;
+              }
+        }
+    }
+}
+
+
 .skills {
     width: 70%;
     margin: auto;
@@ -466,7 +485,6 @@
     font-weight: 100;  
     max-width: 70%; 
     top: 5%;
-    text-align: justify;
     left: 8%;
     
     h1, h2, h3, h4 {
@@ -483,6 +501,13 @@
 
     p{
         color: rgb(166,166,166);
+        text-align: justify;
+    }
+
+    @media (max-width: 1063px) {
+        p{
+            text-align: left;
+        }
     }
   
     .event {
@@ -546,30 +571,16 @@
 }
 
 
-
-/* Timeline mobile devices sizing */
-
-  @media (max-width: 1063px) {
-
-    .experience {
-        width: 90%;
-    }
-    
-    .timeline{
-        .event {
-            &:before { 
-                left: calc(((((var(--date) * 0.45) + var(--spacing) + var(--line) + var(--dot) + (var(--dotborder) * 2)) * 1.5) * -1));
-                font-size: 0.8em;
-              }
-        }
-    }
-}
-
 .socials {
     width: 70%;
     margin: auto;
     text-align: center;
     padding-top: 2%;
+
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .socials h1 {
@@ -578,4 +589,53 @@
 
 .socials hr {
     width: 20%;
+}
+
+.social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 2%;
+}
+
+.social-card {
+    width: 200px;
+    height: 35px; 
+    background-color: rgb(40, 48, 60);
+    padding: 5px 10px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+    text-align: left;
+}
+
+.social-card img {
+    width: 15%;
+    margin-right: 10%;
+}
+
+.social-card p {
+    font-size: 0.8em;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.social-card:hover {
+    background-color: #8a2be2;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:  rgb(166, 166, 166);
+    padding-top: 50px;
+    text-align: center;
 }
