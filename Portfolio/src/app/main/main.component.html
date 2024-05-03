@@ -13,11 +13,9 @@
 <div class="content">
 
   <div class="circle-container">
-    <div class="circle" id="circle1" 
-         [style.background-color]="buttonColor"></div>
-    <div class="circle" id="circle2"
-         [style.background-color]="buttonColor">
-      <img src="assets/profile-code.png" alt="Profile Code" class="circle-image">
+    <div class="circle" id="circle1" [style.background-color]="buttonColor"></div>
+    <div class="circle" id="circle2" [style.background-color]="buttonColor">
+      <img [class.slide-in-out]="infoVisible" [class.hidden]="!infoVisible" [src]="profileImage" alt="Profile Code" class="circle-image">
     </div>
   </div>
   
@@ -25,8 +23,8 @@
   <div class="personal-info">
     <h1>CHEYO KAPELANSHILA CHOMBA</h1>
     <hr>
-    <p>{{info}}</p>
-      <button [style.background-color]="buttonColor"
+    <p [class.slide-in-out]="infoVisible" [class.hidden]="!infoVisible">{{info}}</p>
+    <button [style.background-color]="buttonColor"
       [style.--hover-button-color]="hoverButtonColor">{{buttonDisplay}}</button>
     </div>
 

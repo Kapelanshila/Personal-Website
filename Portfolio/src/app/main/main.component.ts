@@ -18,6 +18,9 @@ export class MainComponent {
   hovering: boolean = false;
   buttonDisplay: string = "Download CV";
   info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
+  infoVisible: boolean = true;
+  profileImage: string = "assets/profile-code.png";
+
 
   public skills = [
     { name: 'Angular', image: 'assets/angular.png' },
@@ -38,7 +41,8 @@ export class MainComponent {
       this.buttonColor = 'rgba(255,0,102)';
       this.hoverButtonColor = 'rgba(208, 0, 84)'
       this.info = "I have always been passionate about art, aspiring to become an animator since a very young age. Although my career began in IT, drawing remains a hobby of mine, and I am planning to start animation projects soon.";
-
+      this.buttonDisplay = "ArtStation";
+      this.profileImage = "assets/profile-art.png";
     } else {
       this.color1 = '#4200a2';
       this.color2 = '#3366ff';
@@ -46,6 +50,17 @@ export class MainComponent {
       this.buttonColor = 'rgba(102,0,255)';
       this.hoverButtonColor = 'rgb(71, 0, 177)';
       this.info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
+      this.buttonDisplay = "Download CV";
+      this.profileImage = "assets/profile-code.png";
     }
+    this.infoVisible = false;
+    this.toggleInfoVisibility();
+  }
+
+  toggleInfoVisibility() {
+    setTimeout(() => {
+      this.infoVisible = !this.infoVisible;
+    }, 300);
   }
 }
+
