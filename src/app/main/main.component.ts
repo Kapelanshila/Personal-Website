@@ -39,7 +39,6 @@ export class MainComponent {
   artImages: string[] = [
     'Angles.png',
     'Betrayal.png',
-    'No Days Off Logos.png',
     'Road Trip.png',
     'Reo.jpg',
   ];
