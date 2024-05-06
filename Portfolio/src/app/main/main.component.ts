@@ -13,7 +13,7 @@ export class MainComponent {
   color1 = '#4200a2';
   color2 = '#3366ff';
   hoverColor: string = 'rgba(51, 102, 255, 0.2)';
-  buttonColor  = 'rgba(102,0,255)';
+  buttonColor = 'rgba(102,0,255)';
   hoverButtonColor: string = 'rgb(71, 0, 177)';
   hovering: boolean = false;
   buttonDisplay: string = "Download CV";
@@ -46,17 +46,17 @@ export class MainComponent {
 
 
   toggleHome() {
-      this.color1 = '#4200a2';
-      this.color2 = '#3366ff';
-      this.hoverColor = 'rgba(51, 102, 255, 0.2)';
-      this.buttonColor = 'rgba(102,0,255)';
-      this.hoverButtonColor = 'rgb(71, 0, 177)';
-      this.info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
-      this.buttonDisplay = "Download CV";
-      this.profileImage = "assets/profile-code.png";
-      this.infoVisible = false;
-      this.toggleInfoVisibility();
-      this.home = true;
+    this.color1 = '#4200a2';
+    this.color2 = '#3366ff';
+    this.hoverColor = 'rgba(51, 102, 255, 0.2)';
+    this.buttonColor = 'rgba(102,0,255)';
+    this.hoverButtonColor = 'rgb(71, 0, 177)';
+    this.info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
+    this.buttonDisplay = "Download CV";
+    this.profileImage = "assets/profile-code.png";
+    this.infoVisible = false;
+    this.toggleInfoVisibility();
+    this.home = true;
   }
 
   toggleArt() {
