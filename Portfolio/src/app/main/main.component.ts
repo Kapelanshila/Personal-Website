@@ -20,6 +20,9 @@ export class MainComponent {
   info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
   infoVisible: boolean = true;
   profileImage: string = "assets/profile-code.png";
+  home: boolean = true;
+  showModal = false;
+  currentImage: string | null = null;
 
 
   public skills = [
@@ -33,17 +36,16 @@ export class MainComponent {
     { name: 'Azure', image: 'assets/azure.png' }
   ];
 
-  toggleColors() {
-    if (this.color1 === '#4200a2' && this.color2 === '#3366ff') {
-      this.color1 = 'rgb(188,0,76)';
-      this.color2 = 'rgb(255,51,153)';
-      this.hoverColor = 'rgba(255, 51, 153, 0.2)';
-      this.buttonColor = 'rgba(255,0,102)';
-      this.hoverButtonColor = 'rgba(208, 0, 84)'
-      this.info = "I have always been passionate about art, aspiring to become an animator since a very young age. Although my career began in IT, drawing remains a hobby of mine, and I am planning to start animation projects soon.";
-      this.buttonDisplay = "ArtStation";
-      this.profileImage = "assets/profile-art.png";
-    } else {
+  artImages: string[] = [
+    'Angles.png',
+    'Betrayal.png',
+    'No Days Off Logos.png',
+    'Road Trip.png',
+    'Reo.jpg',
+  ];
+
+
+  toggleHome() {
       this.color1 = '#4200a2';
       this.color2 = '#3366ff';
       this.hoverColor = 'rgba(51, 102, 255, 0.2)';
@@ -52,15 +54,56 @@ export class MainComponent {
       this.info = "I am currently a graduate digital consultant in data engineering. I have always been interested in technology and work on digital art in my spare time. My goal is to design efficient IT systems and solutions and implement and create visually appealing and easy-to-use systems.";
       this.buttonDisplay = "Download CV";
       this.profileImage = "assets/profile-code.png";
-    }
+      this.infoVisible = false;
+      this.toggleInfoVisibility();
+      this.home = true;
+  }
+
+  toggleArt() {
+    this.color1 = 'rgb(188,0,76)';
+    this.color2 = 'rgb(255,51,153)';
+    this.hoverColor = 'rgba(255, 51, 153, 0.2)';
+    this.buttonColor = 'rgba(255,0,102)';
+    this.hoverButtonColor = 'rgba(208, 0, 84)'
+    this.info = "I have always been passionate about art, aspiring to become an animator since a very young age. Although my career began in IT, drawing remains a hobby of mine, and I am planning to start animation projects soon.";
+    this.buttonDisplay = "ArtStation";
+    this.profileImage = "assets/profile-art.png";
     this.infoVisible = false;
     this.toggleInfoVisibility();
+    this.home = false;
   }
+
 
   toggleInfoVisibility() {
     setTimeout(() => {
       this.infoVisible = !this.infoVisible;
     }, 300);
+  }
+
+  downloadFile(): void {
+    const link = document.createElement('a');
+    if (this.home === true) {
+      link.href = 'assets/Cheyo Chomba\'s CV.pdf';
+      link.download = 'Cheyo Chomba\'s CV.pdf';
+    } else {
+      link.href = 'https://www.artstation.com/Kapelanshila';
+      link.target = '_blank';
+    }
+    link.click();
+  }
+
+  getImagePath(image: string): string {
+    return `assets/art/${image}`;
+  }
+
+  openModal(image: string): void {
+    this.currentImage = image;
+    this.showModal = true;
+  }
+
+  closeModal(): void {
+    this.showModal = false;
+    this.currentImage = null;
   }
 }
 

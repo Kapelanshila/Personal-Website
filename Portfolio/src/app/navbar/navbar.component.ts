@@ -8,6 +8,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NavbarComponent {
   @Output() onArtClicked = new EventEmitter<void>();
+  @Output() onHomeClicked = new EventEmitter<void>();
+
 
   navLinksVisible = false;
 
@@ -17,5 +19,9 @@ export class NavbarComponent {
 
   emitArtClick() {
     this.onArtClicked.emit();
+  }
+
+  emitHomeClicked() {
+    this.onHomeClicked.emit();
   }
 }

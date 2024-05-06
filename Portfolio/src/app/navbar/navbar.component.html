@@ -3,11 +3,10 @@
       <div class="logo" [class.hide-logo]="navLinksVisible">MY PORTFOLIO</div>
       <button class="hamburger" (click)="toggleNavLinks()">☰</button>
       <ul class="nav-links" [class.show]="navLinksVisible">
-        <li><a href="#">HOME</a></li>
+        <li><a href="#" (click)="emitHomeClicked(); $event.preventDefault()">HOME</a></li>
         <li><a href="#" (click)="emitArtClick(); $event.preventDefault()">ART</a></li>
-        <!-- <li><a href="#">ABOUT</a></li> -->
-        <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-        <li style="padding-bottom: 1%;"><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/cheyo-chomba-512542215/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li style="padding-bottom: 1%;"><a href="https://www.instagram.com/cheyo.kc" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
       </ul>
     </nav>
   </header>
